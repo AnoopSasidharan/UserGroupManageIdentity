@@ -76,6 +76,8 @@ namespace UserGroupManage.Identity
                 
             }
 
+            //InitializeDatabase(app);
+
             app.UseStaticFiles();
 
             app.UseRouting();
