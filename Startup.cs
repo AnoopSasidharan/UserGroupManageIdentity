@@ -16,6 +16,7 @@ using System.Reflection;
 using IdentityServer4.EntityFramework.DbContexts;
 using System.Linq;
 using IdentityServer4.EntityFramework.Mappers;
+using UserGroupManage.Identity.Profile;
 
 namespace UserGroupManage.Identity
 {
@@ -64,6 +65,7 @@ namespace UserGroupManage.Identity
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
+            builder.AddProfileService<UserProfileService>();
 
             services.AddAuthentication();
         }

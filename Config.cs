@@ -54,11 +54,13 @@ namespace UserGroupManage.Identity
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "usergroupmanageapi"
+                        "usergroupmanageapi",
+                        "roles"
                     },
-                    AllowedCorsOrigins = 
+                    AllowedCorsOrigins = new List<string>
                     { 
-                        "http://localhost:4200"
+                        "http://localhost:4200",
+                        "https://lemon-island-0b3fcc910.azurestaticapps.net"
                     },
                     RequireClientSecret = false,
                     PostLogoutRedirectUris = new List<string> 
