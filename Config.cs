@@ -46,7 +46,9 @@ namespace UserGroupManage.Identity
                     RedirectUris = new List<string>
                     {
                         "http://localhost:4200/auth-callback",
-                        "https://lemon-island-0b3fcc910.azurestaticapps.net/auth-callback"
+                        "https://lemon-island-0b3fcc910.azurestaticapps.net/auth-callback",
+                        "https://localhost:5007/auth-callback",
+                        "https://usergroupmanageapp.azurewebsites.net/auth-callback"
                     },
                     RequirePkce = true,
                     AllowAccessTokensViaBrowser = true,
@@ -60,14 +62,18 @@ namespace UserGroupManage.Identity
                     AllowedCorsOrigins = new List<string>
                     { 
                         "http://localhost:4200",
-                        "https://lemon-island-0b3fcc910.azurestaticapps.net"
+                        "https://lemon-island-0b3fcc910.azurestaticapps.net",
+                        "https://localhost:5007",
+                        "https://usergroupmanageapp.azurewebsites.net"
                     },
                     RequireClientSecret = false,
                     PostLogoutRedirectUris = new List<string> 
                     { 
                         "http://localhost:4200/signout-callback" ,
                         "http://localhost:4200",
-                        "https://lemon-island-0b3fcc910.azurestaticapps.net/auth-callback"
+                        "https://lemon-island-0b3fcc910.azurestaticapps.net/auth-callback",
+                        "https://localhost:5007/",
+                        "https://usergroupmanageapp.azurewebsites.net"
                     },
                     RequireConsent = false,
                     AccessTokenLifetime = 600
