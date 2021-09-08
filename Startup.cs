@@ -42,7 +42,7 @@ namespace UserGroupManage.Identity
             //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration["UserGroupManagementDB"]));
+                options.UseSqlServer(Configuration.GetConnectionString("UserGroupManagementDB")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
