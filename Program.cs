@@ -73,6 +73,10 @@ namespace UserGroupManage.Identity
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSerilog()
+                .ConfigureAppConfiguration((context, config)=>
+                {
+                    config.AddAzureKeyVault("https://usermanagementapp.vault.azure.net/");
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
